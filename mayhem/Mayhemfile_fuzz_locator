@@ -1,0 +1,9 @@
+project: savantenvs/gpredict
+target: fuzz_locator
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_locator/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_locator
+    libfuzzer: true
+    timeout: 10

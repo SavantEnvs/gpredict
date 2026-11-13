@@ -1,0 +1,10 @@
+project: savantenvs/gpredict
+target: fuzz_qth
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_qth/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_qth
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_qth/fuzz_qth.dict
